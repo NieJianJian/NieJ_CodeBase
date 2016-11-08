@@ -1,1 +1,1 @@
-include ':app', ':Android_Js'
+include ':app'
