@@ -1,4 +1,4 @@
-package njj.fragmeny;
+package njj.fragment;
 
 import org.junit.Test;
 
