@@ -24,6 +24,12 @@ public class MyFragment3 extends Fragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.i("niejianjian","MyFragment3 -> isVisibleToUser -> " + isVisibleToUser);
+    }
+
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         Log.i("niejianjian","MyFragment3 -> onAttach ->");

@@ -26,7 +26,10 @@ public class MyFragment0 extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        Log.i("niejianjian"," -> isVisibleToUser -> " + isVisibleToUser);
+        if (getUserVisibleHint()){
+
+        }
+        Log.i("niejianjian","MyFragment0 -> isVisibleToUser -> " + isVisibleToUser);
     }
 
     @Override

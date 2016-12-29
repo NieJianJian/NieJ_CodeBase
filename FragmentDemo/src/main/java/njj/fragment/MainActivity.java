@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.view.Window;
 
@@ -41,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
      * FragmentStatePagerAdapter 和 FragmentPagerAdapter的区别。
      * FragmentPagerAdapter：对于不在需要的Fragment，仅仅只会调用onDestoryView方法，也就是只销毁视图并没有销毁Fragment。
      * FragmentStatePagerAdapter：会销毁不再需要的fragment，一直调用到onDetach方法，将fragment和activity接触绑定。
-     *      销毁时，会调用onSaveInstanceState(Bundle outState)方法通过bundle将信息保存下来，当用户切换回来，
-     *      可以通过该bundle恢复生成新的fragment，也就是说，我们可以在onSaveInstanceState(Bundle outState)
-     *      方法中保存一些数据，在onCreate中进行恢复创建
+     * 销毁时，会调用onSaveInstanceState(Bundle outState)方法通过bundle将信息保存下来，当用户切换回来，
+     * 可以通过该bundle恢复生成新的fragment，也就是说，我们可以在onSaveInstanceState(Bundle outState)
+     * 方法中保存一些数据，在onCreate中进行恢复创建
      */
     class MyPagerAdapter extends FragmentPagerAdapter {
 
@@ -69,9 +68,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void finishUpdate(ViewGroup container) {
             super.finishUpdate(container);
-            Log.i("niejianjian"," ->  ->" + mViewPager.getCurrentItem());
+//            Log.i("niejianjian"," ->  ->" + mViewPager.getCurrentItem());
         }
-
     }
-
 }
